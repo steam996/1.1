@@ -3,14 +3,12 @@ package jm.task.core.jdbc.service;
 import jm.task.core.jdbc.dao.UserDaoJDBCImpl;
 import jm.task.core.jdbc.model.User;
 
-import java.sql.*;
-import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 
 public class UserServiceImpl implements UserService {
 
     private final UserDaoJDBCImpl daoJDBC;
+
     public UserServiceImpl() {
         daoJDBC = new UserDaoJDBCImpl();
     }
@@ -20,7 +18,7 @@ public class UserServiceImpl implements UserService {
     }
 
     public void dropUsersTable() {
-       daoJDBC.dropUsersTable();
+        daoJDBC.dropUsersTable();
     }
 
     public void saveUser(String name, String lastName, byte age) {
@@ -32,7 +30,7 @@ public class UserServiceImpl implements UserService {
     }
 
     public List<User> getAllUsers() {
-       return daoJDBC.getAllUsers();
+        return daoJDBC.getAllUsers();
     }
 
     public void cleanUsersTable() {
