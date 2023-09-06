@@ -9,10 +9,10 @@ import java.util.List;
 
 public class UserDaoJDBCImpl implements UserDao {
 
-    private final Util util = new Util();
     private final Connection connection;
+
     public UserDaoJDBCImpl() {
-        connection = util.openConnection();
+        connection = Util.openConnection();
     }
 
     public void createUsersTable() {
